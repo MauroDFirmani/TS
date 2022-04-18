@@ -1,6 +1,6 @@
 import { Space, Spin } from "antd";
 
-const withSpinner = (Component) => (props) => {
+const withSpinner = (Component:any) => (props:any) => {
   const {isLoading, ...otherProps} = props;
   return (
     <>

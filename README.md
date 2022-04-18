@@ -13,5 +13,10 @@ Run manually
 
 5 - Run frontend service with 'npm start' command
 
+----------------------------------------------------------
 
+Run with Docker
 
+1 - Make sure that you have installed Docker and you can run docker-compose
+
+2 - Go to root foolder and run 'docker-compose up'
