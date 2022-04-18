@@ -5,7 +5,7 @@ Run manually
 
 1 - Create .env files in each folder(backend and frontend)
 
-2 - Complete each .env following his .env.example model
+2 - Complete each .env following its .env.example model
 
 3 - Run 'npm i' command in each root folder (/backend - /frontend)
 
