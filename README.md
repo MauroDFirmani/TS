@@ -1,6 +1,12 @@
 # TrueNorth
 True North Tasks Challenge
 
+First run manually or with docker and then follow the instructions below.
+
+Access to the app trought 'localhost:3000'. By default only 3 tasks will be showed but accesing to 'localhost:3000/some-number' you will see the number of tasks sent in the url. For example: localhost:3000/10
+
+----------------------------------------------------------
+
 Run manually
 
 1 - Create .env files in each folder(backend and frontend)
@@ -25,6 +31,4 @@ Run with Docker
 
 4 - Go to root foolder and run 'docker-compose up'
 
-----------------------------------------------------------
-
-Access to the project trought 'localhost:3000'. By default only 3 tasks will be showed but accesing to 'localhost:3000/some-number' you will see the number of tasks sent in the url. For example: localhost:3000/10
+]
