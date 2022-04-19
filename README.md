@@ -30,5 +30,3 @@ Run with Docker
 3 - Make sure that you have installed Docker and you can run docker-compose
 
 4 - Go to root foolder and run 'docker-compose up'
-
-]
