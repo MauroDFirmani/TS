@@ -21,3 +21,13 @@ tasksRouter.patch("/", async (req: Request, res: Response) => {
         res.status(500).send(error.message);
     }
 });
+
+tasksRouter.get("/all", async (req: Request, res: Response) => {
+    try {
+        const tasksController = new TasksController()
+        const response: any = await tasksController.getAll(req);
+        res.status(200).send(response);
+    } catch (error: any) {
+        res.status(500).send(error.message);
+    }
+});

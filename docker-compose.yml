@@ -31,3 +31,10 @@ services:
     depends_on:
       - tn-backend
     restart: always
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    command: --quiet

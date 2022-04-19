@@ -35,4 +35,17 @@ export class TasksController {
         }
     }
 
+    public async getAll(req: Request) {
+        try {
+            const allTasks = await this.tasksService.getAllTasks()
+            return {
+                version: '1.0',
+                data: allTasks,
+            }
+        } catch (error) {
+            console.error(error)
+            throw new Error(`${error}`)
+        }
+    }
+
 }
