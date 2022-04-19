@@ -9,6 +9,7 @@ export class TaskService {
         quantity: string,
     ): Promise<ITasks> {
         try {
+            const taskToCreate = []
             const url: string = `${process.env.TITLES_URL}${quantity}`;
             const { data: titles } : { data:string[] } = await axios.get(url)
             const response:Task[] = []
@@ -16,12 +17,13 @@ export class TaskService {
                 const task = new Task({ title: titles[i] })
                 const isPreviouslyExist = await TaskModel.findOne({ title: titles[i]})
                 if(!isPreviouslyExist) {
-                    const newTask = await TaskModel.create(task)
-                    response.push(newTask)
+                    taskToCreate.push(TaskModel.create(task))
+                    response.push(task)
                 }else{
-                    response.push(isPreviouslyExist as Task)
+                    response.push(isPreviouslyExist)
                 }
             }
+            await Promise.all(taskToCreate)
             return response
         } catch (error) {
             console.error(error)
